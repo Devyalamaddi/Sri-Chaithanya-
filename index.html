@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Student Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add this inside the <head> section -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Institution Student Details Lookup</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <h2>Search for Student Details</h2>
+            <form id="search-form">
+                <label for="search-type">Search by:</label>
+                <select id="search-type" name="search-type">
+                    <option value="name">Name</option>
+                    <option value="rollnumber">Roll Number</option>
+                    <option value="uid">UID</option>
+                </select>
+                <input type="text" id="search-query" name="search-query" placeholder="Enter your query here">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div id="result-container">
+            <!-- Search results will be displayed here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Institution Name. All rights reserved.</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
