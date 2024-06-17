@@ -3,38 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institution Student Details</title>
+    <title>Student Details Search</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Add this inside the <head> section -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-
 </head>
 <body>
-    <header>
-        <h1>Institution Student Details Lookup</h1>
-    </header>
-    <main>
-        <div class="search-container">
-            <h2>Search for Student Details</h2>
-            <form id="search-form">
-                <label for="search-type">Search by:</label>
+    <div class="container">
+        <h1>Institution Student Details Search</h1>
+        <form id="search-form">
+            <div class="form-group">
+                <label for="search-type">Search By:</label>
                 <select id="search-type" name="search-type">
                     <option value="name">Name</option>
                     <option value="rollnumber">Roll Number</option>
                     <option value="uid">UID</option>
                 </select>
-                <input type="text" id="search-query" name="search-query" placeholder="Enter your query here">
-                <button type="submit">Search</button>
-            </form>
+            </div>
+            <div class="form-group">
+                <label for="search-query">Enter Details:</label>
+                <input type="text" id="search-query" name="search-query" required>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+        <div id="result-container" class="result-container">
+            <div id="student-card" class="student-card"></div>
         </div>
-        <div id="result-container">
-            <!-- Search results will be displayed here -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Institution Name. All rights reserved.</p>
-    </footer>
-    <script src="./script.js"></script>
+    </div>
+    <script src="https://cdn.sheetjs.com/xlsx-0.17.0/package/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
